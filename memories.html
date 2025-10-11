@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Memories</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="gallery-section">
+    <h2>📸 Our Special Memories</h2>
+    
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="Bus_Travel.jpg" alt="Memory 1">
+        <p class="caption">The last day we travelled together from college 😂</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Dog_show.jpg" alt="Memory 2">
+        <p class="caption">Your favourite show 🎊</p>
+      </div>
+      <div class="gallery-item">
+        <img src="First_shopping.png" alt="Memory 3">
+        <p class="caption">Our first shopping 💖</p>
+      </div>
+      <div class="gallery-item">
+        <img src="First_interview.png" alt="Memory 4">
+        <p class="caption">Our first interview 💖</p>
+      </div>
+      <div class="gallery-item">
+        <img src="Night_out.png" alt="Memory 5">
+        <p class="caption">Our first outing at the restaurant 💖</p>
+      </div>
+      <div class="gallery-item">
+        <img src="New_episode.png" alt="Memory 6">
+        <p class="caption">Cheers to our new path 💖</p>
+      </div>
+      <div class="gallery-item">
+        <img src="First_office.jpg" alt="Memory 7">
+        <p class="caption">First day office 💖</p>
+      </div>
+    </div>
+
+    <p class="memories-text">
+      You’ve filled my life with so much joy and unforgettable memories.  
+      Today is all about celebrating YOU – the most wonderful friend I could ask for. 
+    </p>
+
+    <button class="surprise-btn" onclick="goToMessage()">Next ➡</button>
+  </section>
+
+  <script src="script.js"></script>
+  <script>
+    // Ensure navigation works
+    function goToMessage() {
+      window.location.href = "message.html";
+    }
+
+    // Show captions when clicking images
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+    galleryItems.forEach(img => {
+      img.addEventListener("click", () => {
+        const caption = img.nextElementSibling;
+        caption.classList.toggle("show");
+      });
+    });
+  </script>
+</body>
+</html>

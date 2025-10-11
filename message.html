@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Thoughts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="message-box">
+    <h2>💌 Share Your Thoughts</h2>
+    <p>Write something special and let me know how you feel 🥰</p>
+
+    <textarea id="userMessage" placeholder="Type your message here..."></textarea>
+    <button class="surprise-btn" onclick="submitMessage()">Send ✨</button>
+    
+    <button onclick="window.location.href='video.html'" class="btn">
+  Click Me for a Surprise
+</button>
+
+
+    <div id="displayMessage" class="hidden"></div>
+  </section>
+
+  <script>
+    function submitMessage() {
+      const textarea = document.getElementById("userMessage");
+      const message = textarea.value.trim();
+      const displayDiv = document.getElementById("displayMessage");
+
+      if (message) {
+        displayDiv.textContent = "💖 Your Message: " + message;
+        displayDiv.classList.remove("hidden");
+        textarea.value = ""; // clear after sending
+      } else {
+        displayDiv.textContent = "⚠️ Please type a message before sending!";
+        displayDiv.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
