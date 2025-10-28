@@ -127,23 +127,17 @@ body {
 
 .gallery-item img {
   width: 100%;
-  height: 400px;
+  height: 350px;
   object-fit: cover; /* ✅ keeps face visible */
 }
 
-/* 📱 Mobile responsive image size */
-@media (max-width: 768px) {
+
+@media (max-width: 800px) {
   .gallery-item img {
-    height: 250px; /* Adjust as you like — 200–300px works well for phones */
+    height: 450px; 
   }
 }
 
-/* 🧠 Optional: for very small screens */
-@media (max-width: 480px) {
-  .gallery-item img {
-    height: 200px;
-  }
-}
 
 .caption {
   padding: 12px;
