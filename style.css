@@ -134,7 +134,7 @@ body {
 
 @media (max-width: 768px) {
   .gallery-item img {
-    height: 220px;
+    height: 420px;
     object-position: top center;
   }
 }
