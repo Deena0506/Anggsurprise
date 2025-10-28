@@ -131,6 +131,20 @@ body {
   object-fit: cover; /* ✅ keeps face visible */
 }
 
+/* 📱 Mobile responsive image size */
+@media (max-width: 768px) {
+  .gallery-item img {
+    height: 250px; /* Adjust as you like — 200–300px works well for phones */
+  }
+}
+
+/* 🧠 Optional: for very small screens */
+@media (max-width: 480px) {
+  .gallery-item img {
+    height: 200px;
+  }
+}
+
 .caption {
   padding: 12px;
   font-size: 1rem;
